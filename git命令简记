@@ -1,0 +1,13 @@
+
+分支命令：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+用git log --graph命令可以看到分支合并图  #（git log --graph --pretty=oneline --abbrev-commit  更简洁的查看。此命令未验证是否在分支情况不同情况下还能使用。）
+
+合并分支分两种情况：
+一个是主分支未A文件未更改，子分支更改过，合并时可以直接合并
+另外一个时主分支A文件更改了，子分支A文件也更改了，此时合并会提示你对这个A文件更改之后才能真正合并。

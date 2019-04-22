@@ -1,0 +1,5 @@
+fiddler使用教程网站：
+  https://www.jianshu.com/p/99b6b4cd273c
+
+fiddler过滤命令：REGEX:(?insx)/[^\?/]*\.(css|ico|jpg|png|gif|bmp|wav|js|jpeg)(\?.*)?$
+  这个命令好像并无什么用处，猜测需要结合域名来过滤才行

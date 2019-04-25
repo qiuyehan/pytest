@@ -25,10 +25,35 @@ print("-"*10)
 
 #我的体会，[-.]等等都会被当成单词的分割。所以匹配的时候才会出现这中结果
 
+""" 
+1、长度为8-10的用户密码（以字母开头、数字、下划线）
+2、验证输入只能是汉字
+3、电子邮箱验证
+4、URL地址验证
+5、电话号码的验证
+6、简单的身份证号验证
+"""
 
+d = """-3.456,23k4,53,6 -0.01 0 30
+    UM_distinctid=16a0a960cbd4d5-0420b7ddb8fec6-3b60450b-1fa400-16a0a960cbe7a8
+	_gid=GA1.2.1259536047.1555551692 7ddb8fec b7ddb8fe -0420b7d cbe7a8154 iii3453ikh 
+	974697133@qq.com 
+	18201837008@163.com  546@alibb.com 11@ing.uin 
+	https://www.cnblogs.com/wordblog/p/6821329.html
+	http://47.107.124.228:8083/mtzx/v1/mtzx/goods/getMediaDetail
+	http:..
+	http://
+	http//:ien
+	bbbba
+	1111.yen.com
+	2222.cn
+	ying.org
+	"""
 
-d = '-3.456,23k4,53,6 -0.01 0 30'
-y = r'-\b\d+\.\d*|\b0+\b'
+# y = r'http://[\w-]+\.com/.*?'
+# y = r'http://([\w-]+\.)+[\w]+(/[\w./?%&=]*)?'
+y = r"http\S*?\.(com|cn"
+# y = r"(h(bb|tt)){1}"
 print(re.findall(y,d))
 
 
